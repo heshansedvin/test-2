@@ -4,42 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
-        .container { width: 300px; padding: 16px; background-color: white; margin: auto; margin-top: 100px; border: 1px solid #ccc; }
-        h2 { text-align: center; }
-        button { background-color: #4CAF50; color: white; padding: 10px 20px; margin: 8px 0; border: none; cursor: pointer; width: 100%; }
-        button:hover { opacity: 0.8; }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<div class="container">
-    <h2>Welcome, <span id="username"></span>!</h2>
-    <p>This is your dashboard.</p>
-    <button id="logoutButton">Logout</button>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('api/session.php')
-        .then(response => response.json())
-        .then(data => {
-            if (data.loggedIn) {
-                document.getElementById('username').textContent = data.username;
-            } else {
-                window.location.href = 'index.html';
-            }
-        });
-
-        document.getElementById('logoutButton').addEventListener('click', function() {
-            fetch('api/logout.php')
-            .then(() => {
-                window.location.href = 'index.html';
-            });
-        });
-    });
-</script>
-
+    <h1>Dashboard</h1>
+    <p>Welcome, <span id="usernameDisplay"></span></p>
+    <a href="index.html">Logout</a>
+    <script src="script.js"></script>
 </body>
 </html>
