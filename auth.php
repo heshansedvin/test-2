@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: dashboard.php');
     } else {
         $_SESSION['error'] = $response->message;
-        header('Location: index.php');
+        header('Location: index.html');
     }
 }
 

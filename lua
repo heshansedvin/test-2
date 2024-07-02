@@ -7,5 +7,5 @@
 |-- /templates
 |   |-- login.php
 |   |-- dashboard.php
-|-- index.php
+|-- index.html
 |-- auth.php
